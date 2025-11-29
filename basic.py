@@ -33,4 +33,16 @@ def grade_calcultor_switch(grade):
         case _:
             print('What!')
     
-print('You got:', grade_calcultor_switch(grade))
+#print('You got:', grade_calcultor_switch(grade))
+
+#Leap Year Checker: Create a program that determines if a year is a leap year.
+year = 2000
+def check_leap_year(year):
+    if year % 400 == 0 and year % 100 == 0:
+        return 'Leap year'
+    elif year % 4 == 0 and year % 100 != 0:
+        return 'Leap year'
+    else:
+        return 'Not leap'
+    
+print(check_leap_year(year))
