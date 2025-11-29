@@ -45,4 +45,24 @@ def check_leap_year(year):
     else:
         return 'Not leap'
     
-print(check_leap_year(year))
+#print(check_leap_year(year))
+
+#Sum of Even Numbers: Write a program that calculates the sum of all even numbers from 1 to a given number n (inclusive).
+
+def even_num_sum(stop):
+    total = 0
+    for num in range(stop):
+        if num % 2 == 0:
+            total += num
+    return total
+
+#print(even_num_sum(10))
+
+#Multiplication Table: Create a program that prints a multiplication table for a given number up to 10. 
+
+def multi_table(value):
+    for num in range(1, 11):
+        total = value * num
+        print(f'{value} x {num} = {total}')
+    
+print(multi_table(7))
