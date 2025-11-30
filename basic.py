@@ -123,10 +123,24 @@ def highest_avg():
     return name
     
 
-add_student('Justin', 18,75,80,50)
-add_student('Kim', 22, 45, 45, 30)
+# add_student('Justin', 18,75,80,50)
+# add_student('Kim', 22, 45, 45, 30)
 
-print(clac_avg('Justin'))
-print(clac_avg('Kim'))
+# print(clac_avg('Justin'))
+# print(clac_avg('Kim'))
 
-print(highest_avg())
+# print(highest_avg())
+
+# Temperature Converter: Write two functions:
+def fahrenheit_to_celsius(fahrenheit):
+    celsius = (fahrenheit - 32) / (9/5)
+    return celsius
+
+def celsius_to_fahrenheit(celsius):
+    fahrenheit = celsius * (9/5) + 32
+    return fahrenheit
+
+# print('F to C:',round(fahrenheit_to_celsius(75),2))
+# print('C to F:',celsius_to_fahrenheit(20))
+
+# Password Validator
