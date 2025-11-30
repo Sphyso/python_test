@@ -84,10 +84,46 @@ class ShoppingList:
         self.shop_list.remove(item)
         print(f'Removed {item} from list')
 
-shop = ShoppingList('Bread')
-shop.add_item('Butter')
-shop.add_item('Baking soda')
+# shop = ShoppingList('Bread')
+# shop.add_item('Butter')
+# shop.add_item('Baking soda')
 
-shop.display_items()
-shop.remove_item('Bread')
-shop.display_items()
+# shop.display_items()
+# shop.remove_item('Bread')
+# shop.display_items()
+
+student_records = {}
+stud_avg = {}
+
+def add_student(name, age, grd1, grd2, grd3):
+    student_records[name] = {'Age': age,
+                             'Grades': [grd1, grd2, grd3]
+                             }
+    
+def clac_avg(name):
+    num_of_grd = len(student_records[name]['Grades'])
+    all_grd = sum(student_records[name]['Grades'])
+
+    avg = all_grd / num_of_grd
+    stud_avg[name] = avg
+    return avg
+
+def highest_avg():
+    avgs = list(stud_avg.values())
+    names = list(stud_avg.keys())
+    max = avgs[0]
+    name = names[0]
+    for key, value in stud_avg.items():
+        if value > max:
+            max = value
+            name = key
+    return name
+    
+
+add_student('Justin', 18,75,80,50)
+add_student('Kim', 22, 45, 45, 30)
+
+print(clac_avg('Justin'))
+print(clac_avg('Kim'))
+
+print(highest_avg())
