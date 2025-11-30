@@ -65,4 +65,29 @@ def multi_table(value):
         total = value * num
         print(f'{value} x {num} = {total}')
     
-print(multi_table(7))
+#print(multi_table(7))
+
+
+class ShoppingList:
+    def __init__(self, item):
+        self.shop_list = [item]
+
+    def add_item(self, item):
+        self.shop_list.append(item)
+        print(f'Added: {item} to list')
+
+    def display_items(self):
+        for item in self.shop_list:
+            print(item)
+
+    def remove_item(self, item):
+        self.shop_list.remove(item)
+        print(f'Removed {item} from list')
+
+shop = ShoppingList('Bread')
+shop.add_item('Butter')
+shop.add_item('Baking soda')
+
+shop.display_items()
+shop.remove_item('Bread')
+shop.display_items()
