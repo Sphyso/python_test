@@ -67,6 +67,7 @@ def multi_table(value):
     
 #print(multi_table(7))
 
+# Shopping list manager
 
 class ShoppingList:
     def __init__(self, item):
@@ -95,6 +96,8 @@ class ShoppingList:
 student_records = {}
 stud_avg = {}
 
+
+#Student Records Build a dictionary to store student information (name, age, grades as a list). 
 def add_student(name, age, grd1, grd2, grd3):
     student_records[name] = {'Age': age,
                              'Grades': [grd1, grd2, grd3]
