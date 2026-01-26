@@ -144,3 +144,30 @@ def celsius_to_fahrenheit(celsius):
 # print('C to F:',celsius_to_fahrenheit(20))
 
 # Password Validator
+def is_valid_password(password):
+    check = True
+
+    if len(password) < 8:
+        return False
+    
+    check  = any(chr.isdigit() for chr in password)
+
+    if not check:
+        return check
+    
+    check = any(chr.isupper() for chr in password)
+
+    if not check:
+        return check
+
+    check = any(chr.islower() for chr in password)
+
+    if not check:
+        return check
+
+    return check
+
+print(is_valid_password('hfddG54HDrdcds'))
+    
+    
+        
